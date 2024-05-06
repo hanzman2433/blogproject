@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<form action="" method="POST"> {% csrf_token %}<!--「action」はボタンがクリックされたときに次にどのURLに遷移するかを指定するもの-->
+    {{form.as_p}} <!--view の中で指定したmodelで定義された項目を、pタグで囲って表示させるという意味を持っている-->
+    <input type="submit" value="作成する" class="btn btn-primary">
+    <a href="{% url 'list' %}" class="btn btn-primary">戻る</a>
+</form>
+{% endblock content %}

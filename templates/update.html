@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block header %} <!------------ ここがポイントらしい -->
+{% endblock header %}
+
+{% block content %} <!------------ ここがポイントらしい -->
+<form action="" method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="更新する" class="btn btn-primary">
+</form>
+
+{% endblock content %}
